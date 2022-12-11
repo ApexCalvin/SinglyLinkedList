@@ -9,11 +9,11 @@ public class MainApplication {
 
         SinglyLinkedList<Integer> singly = new SinglyLinkedList<Integer>();
 
-        singly.add(4);
+        singly.add(100);
         singly.add(2);
-        singly.add(1);
+        singly.add(70);
         singly.add(3);
-        singly.add(5);
+        singly.add(46);
         System.out.println("Original: "+singly.toString());
 
 

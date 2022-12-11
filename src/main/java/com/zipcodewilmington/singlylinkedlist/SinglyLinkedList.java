@@ -127,16 +127,23 @@ public class SinglyLinkedList<T extends Comparable<T>> {
         Node next = current.next;
         T tempData;
 
+        boolean sorted = false;
+
+        while(!sorted) {
+            sorted = true;
             for (int i = 0; i < length - 1; i++) {
                 if (current.data.compareTo(next.data) > 0) {
                     tempData = (T) current.data;
                     current.data = next.data;
                     next.data = tempData;
+                    sorted = false;
                 }
                 current = current.next;
                 next = next.next;
             }
-
+            current = head;
+            next = current.next;
+        }
     }
 
 
