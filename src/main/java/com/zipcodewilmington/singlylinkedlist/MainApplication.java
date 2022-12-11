@@ -9,27 +9,26 @@ public class MainApplication {
 
         SinglyLinkedList<Integer> singly = new SinglyLinkedList<Integer>();
 
-        singly.add(10); //0
-        singly.add(20);
-        singly.add(30); //2
-        singly.add(40);
-        singly.add(50); //4
+        singly.add(4);
+        singly.add(2);
+        singly.add(1);
+        singly.add(3);
+        singly.add(5);
+        System.out.println("Original: "+singly.toString());
 
-//        System.out.println(singly.getLength());
-//        System.out.println(singly.toString());
-//
-//        System.out.println(singly.getValueAtIndex(0));
-//        System.out.println(singly.getValueAtIndex(1));
-//        System.out.println(singly.getValueAtIndex(4));
 
-        singly.remove(4); //40
-        System.out.println(singly.toString());
 
-//        System.out.println(singly.contains(60));
-//        System.out.println(singly.find(30));
 
-//        SinglyLinkedList singly2 = singly.copy();
-//        System.out.println(singly2.toString());
+
+
+        singly.sort();
+        //System.out.println("Sorted 1: "+singly.toString());
+        singly.sort();
+        System.out.println("Sorted 2: "+singly.toString());
+
+
+
+
 
 
     }

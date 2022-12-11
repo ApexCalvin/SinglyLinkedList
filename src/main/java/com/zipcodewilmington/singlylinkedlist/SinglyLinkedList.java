@@ -37,19 +37,6 @@ public class SinglyLinkedList<T extends Comparable<T>> {
 
     //get -- returns the element at the specified index
     public T getValueAtIndex(int index) {
-//        if (index == 0) {
-//            return head.data; }
-//        Node temp = head.getNext();
-//        if (index == 1) {
-//            return (T) temp.data; }
-//        else {
-//            for (int i = 2; i < length; i++) { //5
-//                temp = temp.getNext();
-//                if (i == index) {
-//                    return (T) temp.getData();
-//                }
-//            }
-//        }
         Node current = head;
         for (int i = 0; i < length; i++) {
             if (i == index) {
@@ -127,33 +114,35 @@ public class SinglyLinkedList<T extends Comparable<T>> {
     }
 
     //sort -- sorts the list using your algorithm of choice. You must perform the sorting yourself (no fair using someone else's library)
+
+
+
+
+
+
+
     public void sort() {
-        boolean sorted = false; //create sorted flag
-        Node current = head; //create starting node
-        Node next = current.next; //created following node
 
-        for (int i = 0; i < length; i++) {
+        Node current = head;
+        Node next = current.next;
+        T tempData;
 
-            //if(current.data > next.data) {
-
+            for (int i = 0; i < length - 1; i++) {
+                if (current.data.compareTo(next.data) > 0) {
+                    tempData = (T) current.data;
+                    current.data = next.data;
+                    next.data = tempData;
+                }
+                current = current.next;
+                next = next.next;
             }
 
-
-
-
-
-
-
-
-
     }
 
-    public void reverse() {
-        //iterate through
-        //change head to null, set as tail
-        //change tail's null to point, set as head
-        //make next point at previous data of ea Node
-    }
+
+
+
+
 
     public String toString() {
         StringBuilder sb = new StringBuilder();
@@ -167,5 +156,12 @@ public class SinglyLinkedList<T extends Comparable<T>> {
 //            }
         }
         return sb.toString();
+    }
+
+    public void reverse() {
+        //iterate through
+        //change head to null, set as tail
+        //change tail's null to point, set as head
+        //make next point at previous data of ea Node
     }
 }

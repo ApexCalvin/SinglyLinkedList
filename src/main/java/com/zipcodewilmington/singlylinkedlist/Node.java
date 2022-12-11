@@ -15,10 +15,6 @@ public class Node<T extends Comparable<T>>{
         this.next = next;
     }
 
-//    public boolean hasNext(){
-//        return (this.next == null) ? false: true;
-//    }
-
     public T getData() {
         return data;
     }
@@ -36,14 +32,11 @@ public class Node<T extends Comparable<T>>{
     }
 
     public String toString() {
-        return "Data value: "+data+"\nPointer value: "+next;
+        return " [data: "+data+", pointer: "+next+" ],";
     }
 
-//    public int compareTo(Node<T> node2) {
-//        return (this.data.compareTo((T) node2.getData()));
-//    }
-//
+
 //    public int compareTo(T o) {
-//        return 0;
+//        return this.data.compareTo(o.data);
 //    }
 }
